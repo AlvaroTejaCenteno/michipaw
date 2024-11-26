@@ -1,0 +1,17 @@
+:root {
+    --primary-color: #ffa1ac;
+    --secondary-color: #fffacd;
+    --accent-color: #a1c9f9;
+    --additional-color1: #e6e6fa;
+    --greey-color: #d3d3d3;
+    --text-color: #FFFFFF;
+    --background-color: #000000cc;
+    
+    --border-color: #a6a6a6;
+    --border-color-focus: #FFFFFF;
+
+    --button-fill-bg-color:#fffacd;
+    --button-fill-text-color:#000000;
+    --button-stroke-color:#fffacd;
+    --button-stroke-text-color:#fffacd;
+}

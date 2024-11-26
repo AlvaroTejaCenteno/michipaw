@@ -1,0 +1,83 @@
+.app-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 16px;
+    background-color: var(--primary-color, #ffa1ac);
+    /* min-width: 300px; */
+}
+.app-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+}
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 80%;
+}
+.user-photo {
+    width: 80px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--border-color-white, #ffffff);
+    background-color: var(--background-color, #fff);
+}
+.user-name {
+    color: var(--text-color2, #fff);
+    font-size: clamp(0.8rem, 5vw, 1.8rem);
+    font-weight: bold;
+    display: -webkit-box; /* Necesario para que funcione el line-clamp */
+    -webkit-line-clamp: 2; /* Limita el texto a 2 líneas */
+    -webkit-box-orient: vertical; /* Define la orientación de las líneas */
+    overflow: hidden; /* Oculta el texto que excede el límite de líneas */
+    text-overflow: ellipsis; /* Muestra puntos suspensivos al final */
+    word-break: break-all; /* rompe la línea si es demasiado larga */
+}
+.options-button {
+    width: 32px;
+    aspect-ratio: 1;
+    border: none;
+    cursor: pointer;
+    /* transition: color 0.3s; */
+    transition: background-color 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: var(--background-color);
+    box-shadow: 0 0px 4px rgba(0, 0, 0, 0.2);
+    
+}
+.options-button > svg {
+    fill: var(--background-color2, #0f0f0f);
+}
+.options-button:hover {
+    box-shadow: 0 0px 6px rgba(0, 0, 0, 0.4);
+}
+.options-button:active {
+    background-color: var(--greey-color0, #d3d3d3);
+}
+
+@media (max-width: 300px) {
+    .app-header-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+    }
+    .user-info {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .user-name {
+        text-align: center;
+    }
+}

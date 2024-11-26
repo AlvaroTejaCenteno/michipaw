@@ -1,0 +1,19 @@
+body {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+*:focus-visible {
+    outline: 2px solid var(--secondary-color, #a1c9f9);
+    transition: outline 0.2s ease-in-out;
+    box-shadow: 0 0 5px 3px var(--secondary-color, #a1c9f9);
+}
+
+.display-none {
+    display: none !important;
+}

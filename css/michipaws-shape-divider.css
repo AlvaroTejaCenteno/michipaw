@@ -1,0 +1,17 @@
+#shape-divider {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    margin-top: -10px;
+    margin-bottom: 16px;
+}
+#shape-divider svg {
+    position: relative;
+    display: block;
+    width: calc(153% + 1.3px);
+    height: 24px;
+}
+#shape-divider .shape-fill {
+    fill: var(--primary-color, #ffa1ac);
+}

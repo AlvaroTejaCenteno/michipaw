@@ -1,0 +1,106 @@
+#other-users-scoreboards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    color: var(--text-color, #2f2f2f);
+}
+
+.other-user-scoreboard,
+.add-other-user-scoreboard {
+    box-sizing: border-box;
+    padding: clamp(8px, 4vw, 32px) clamp(4px, 2vw, 16px);
+    min-height: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.other-user-scoreboard {
+    background-color: var(--background-color, #fff);
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.scoreboard-contact-image {
+    width: clamp(60px, 50%, 112px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    object-fit: cover;
+    /* border: 3px solid var(--border-color-black, #2f2f2f); */
+    background-color: var(--background-color2, #2f2f2f);
+}
+
+.scoreboard-contact-name {
+    font-weight: bold;
+    font-size: clamp(16px, 5vw, 24px);
+    font-stretch: condensed;
+    text-align: center;
+    max-width: clamp(100px, 80%, 300px);
+    display: -webkit-box; /* Necesario para que funcione el line-clamp */
+    -webkit-line-clamp: 2; /* Limita el texto a 2 líneas */
+    -webkit-box-orient: vertical; /* Define la orientación de las líneas */
+    overflow: hidden; /* Oculta el texto que excede el límite de líneas */
+    text-overflow: ellipsis; /* Muestra puntos suspensivos al final */
+}
+.earned-michipaws,
+.awarded-michipaws {
+    /* background-color: red; */
+    padding-top: clamp(4px, 1.5vw, 12px);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: clamp(100px, 80%, 180px);
+}
+
+.scoreboard-counter-title {
+    font-weight: bold;
+    font-size: clamp(12px, 4vw, 20px);
+}
+
+.scoreboard-counter {
+    /* font-size: 3.5rem; */
+    font-size: clamp(28px, 6vw, 40px);
+    font-stretch: condensed;
+    color: var(--secondary-color, #a1c9f9);
+    text-align: center;
+}
+
+.add-other-user-scoreboard {
+    background-color: var(--background-color, #a1c9f9);
+    box-shadow: inset 0px 0px 16px -9px rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-other-user-scoreboard > button {
+    width: clamp(24px, 40%, 40px);
+    aspect-ratio: 1;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 0;
+    border-radius: 50%;
+}
+.add-other-user-scoreboard > button svg {
+    fill: var(--background-color, #fff);
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
+    transition: fill 0.3s, filter 0.3s;
+}
+
+.add-other-user-scoreboard > button svg:hover {
+    filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.4));
+}
+.add-other-user-scoreboard > button svg:active {
+    fill: var(--greey-color0, #ff0000);
+}
+@media (max-width: 300px) {
+    #other-users-scoreboards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

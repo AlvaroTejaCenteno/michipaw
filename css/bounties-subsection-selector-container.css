@@ -1,0 +1,74 @@
+
+#bounties-subsection-selector-container {
+    /* background-color: var(--primary-color, #ffa1ac); */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#selector-container {
+    display: flex;
+    background-color: var(--primary-color, #ffa1ac);
+}
+#selector-container > button {
+    box-sizing: content-box;
+    height: 24px;
+    border: none;
+    background-color: var(--background-color1, #fff);
+    box-shadow: 0 0 15px rgb(0, 0, 0, 0.5);
+    width: 50%;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#selector-container > button h2 {
+    /* width: 390px; */
+    white-space: nowrap; /* Evita que el texto haga saltos de línea */
+    overflow: hidden; /* Oculta el texto que no cabe */
+    text-overflow: ellipsis; /* Agrega los puntos suspensivos (...) */
+}
+
+#your-bounties-subsection-selector {
+    border-radius: 0 8px 0 0;
+}
+#contacts-bounties-subsection-selector {
+    border-radius: 8px 0 0 0;
+}
+
+#shadow-cover {
+    background-color: var(--background-color, #fff);
+    width: 100%;
+    height: 24px;
+    z-index: 2;
+}
+#selector-container > button.selected-selector {
+    z-index: 1;
+    color: var(--text-color, #2f2f2f);
+}
+#selector-container > button.not-selected-selector {
+    z-index: 0;
+    color: var(--greey-color2, #fff);
+    background-color: var( --greey-color0, #eeeeee);
+}
+
+#selector-container > button:hover.not-selected-selector {
+    box-shadow: 0 0 15px rgb(0, 0, 0, 0.9);
+    cursor: pointer;
+    color: var(--text-color, #2f2f2f);
+}
+
+@media (min-width: 800px) {
+    #selector-container > button h2 {
+        width: 390px;
+    }
+    #your-bounties-subsection-selector {
+        justify-content: end !important;
+    }
+    #contacts-bounties-subsection-selector {
+        justify-content: start !important;
+    }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .father {
+            width: 80%;
+            min-height: 100vh;
+            background-color: aqua;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .hijo {
+            flex: 3 1 calc(50% - 10px);
+            /* Esto asegura que los elementos se distribuyan en 2 columnas con el gap incluido */
+            min-height: 300px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="hijo"></div>
+        <div class="hijo"></div>
+        <div class="hijo"></div>
+        <div class="hijo"></div>
+        <div class="hijo"></div>
+        <div class="hijo"></div>
+        <div class="hijo"></div>
+    </div>
+</body>
+
+</html>

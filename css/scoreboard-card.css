@@ -1,0 +1,40 @@
+
+.scoreboard-card {
+    background-color: var(--secondary-color, #a1c9f9);
+    width: 100%;
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: clamp(4px, 6vw, 16px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(4px, 2vw, 16px);
+    overflow: hidden;
+}
+.scoreboard-title {
+    /* font-size: 1.5rem; */
+    font-size: clamp(12px, 4vw, 16px);
+    font-weight: bold;
+    color: var(--text-color2, #fff);
+    text-transform: uppercase;
+    text-align: center;
+}
+.scoreboard-card > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(8px, 2vw, 16px);
+}
+.scoreboard-score {
+    /* font-size: 3.5rem; */
+    font-size: clamp(20px, 12vw, 42px);
+    font-stretch: condensed;
+    font-weight: bold;
+    color: var(--text-color2, #fff);
+    text-align: center;
+}
+.scoreboard-icon {
+    width: clamp(12px, 6vw, 24px);
+    fill: var(--text-color2, #fff);
+}
